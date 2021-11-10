@@ -29,7 +29,3 @@ import { } from ________
 ```javascript
 "TEST_GET_EMAIL"
 ```
-
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
