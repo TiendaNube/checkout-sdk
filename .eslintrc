@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },  
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": ["!**/*"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "@tiendanube/eslint-config"
+  ],
+  "globals": {
+    "sessionStorage": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "testing-library"
+  ],
+  "rules":{
+    "react/no-array-index-key":0,
+    "react/button-has-type": 0,
+    "no-return-await": 0,
+    "react/prop-types": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // https://thecodebarbarian.com/async-stack-traces-in-node-js-12
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "error",
+    "testing-library/await-fire-event": "error",
+    "testing-library/prefer-wait-for": "error",
+    "import/extensions": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}
