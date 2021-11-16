@@ -4,22 +4,27 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/index.js',
   output: {
-      path: path.resolve(__dirname, 'build'),
-      filename: 'bundle.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
-      loaders: [
-          {
-              test: /\.js$/,
-              loader: 'babel-loader',
-              query: {
-                  presets: ['es2015']
-              }
-          }
-      ]
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+      }
+    ]
   },
   stats: {
-      colors: true
+    colors: true
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'build'),
+    },
+    compress: true,
+    port: 9000,
+  },
 };

@@ -17,12 +17,23 @@ Abaixo temos exemplo de como utilizá-lo.
 yarn add -D __________
 ```
 
-## Usando
-
+## Subscribe
 ```javascript
-import { } from ________
+import PubSub from 'pubsub-js'
 
-"""""""""""implementação"""""""""""
+var mySubscriber = function (msg, data) {
+  // put here your code
+};
+
+PubSub.subscribe('NAME_EVENT', mySubscriber);
+```
+
+## Publish
+```javascript
+import PubSub from 'pubsub-js'
+
+data = {}
+window.SDKCheckout.publishEvent('NAME_EVENT', data)
 ```
 
 ## Name Events to register
