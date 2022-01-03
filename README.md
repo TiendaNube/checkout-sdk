@@ -38,5 +38,14 @@ window.SDKCheckout.publishEvent('NAME_EVENT', data)
 
 ## Name Events to register
 ```javascript
-"TEST_GET_EMAIL"
+Subcribers
+"VER_EMAIL_FILLED" - data: {
+
+}
+
+Published
+"ON_EMAIL_FILLED_RETURN" - data: {
+  success: true/false -> required
+  error: string -> optional
+}
 ```

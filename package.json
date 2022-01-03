@@ -1,8 +1,9 @@
 {
-  "name": "checkout-sdk",
-  "version": "1.0.0",
+  "private": false,
+  "name": "@tiendanube/checkout-sdk",
+  "version": "1.0.9",
   "description": "",
-  "main": "index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
