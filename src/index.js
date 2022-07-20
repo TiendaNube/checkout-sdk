@@ -72,7 +72,7 @@ const setInitialWindowSDK = () => {
     hideInstallments: async (data) => {
       const isReady = await validateReadyState()
     
-      if (!isReady || !objectHasKeys(['id', 'value'], data) || !checkObjectValuesType(data)) {
+      if (!isReady || !objectHasKeys(['id', 'value'], data) || !Array.isArray(data.value)) {
         return false
       }
     
