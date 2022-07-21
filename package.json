@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@tiendanube/checkout-sdk",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "description": "",
   "main": "build/bundle.js",
   "scripts": {

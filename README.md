@@ -80,7 +80,7 @@ window.SDKCheckout.changePaymentBenefit({ id: 'gateway_credit_card', value: '12x
 Adiciona informação extra ao conteúdo do meio de pagamento externo/redirect
 
 ```javascript
-window.SDKCheckout.addPaymentContentText({ id: 'gateway_credit_redirect', value: 'lorem ipsum dolor sit amet' })
+window.SDKCheckout.addPaymentContentText({ id: 'gateway_redirect', value: 'lorem ipsum dolor sit amet' })
 ```
 
 Esconde as parcelas da lista de seleção do usuário
