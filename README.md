@@ -49,3 +49,44 @@ Published
   error: string -> optional
 }
 ```
+
+## Checkout Payment Customization Methods
+
+Renderiza no console a lista dos ids dos gateways ativos na loja.
+Estes ids podem ser utilizados no métodos abaixo para customização dos mesmos
+
+```javascript
+window.SDKCheckout.getPaymentIds()
+```
+
+Altera o título da opção de pagamento
+
+```javascript
+window.SDKCheckout.changePaymentTitle({ id: 'gateway_redirect', value: 'Novo Título' })
+```
+
+Esconde as opções de pagamento
+
+```javascript
+window.SDKCheckout.hidePaymentOptions(['gateway_redirect', 'gateway_credit_card'])
+```
+
+Altera ou troca as informações de desconto e parcelamento de um gateway
+
+```javascript
+window.SDKCheckout.changePaymentBenefit({ id: 'gateway_credit_card', value: '12x sem juros' })
+```
+
+Adiciona informação extra ao conteúdo do meio de pagamento externo/redirect
+
+```javascript
+window.SDKCheckout.addPaymentContentText({ id: 'gateway_credit_redirect', value: 'lorem ipsum dolor sit amet' })
+```
+
+Esconde as parcelas da lista de seleção do usuário
+Funciona apenas com gateways de cartão de crédito transparente
+No exemplo serão escondidas as parcelas de 3 e 6 vezes, se a compra permitir parcelamento de até 6 vezes, serão exibidas apenas as parcelas 1, 2, 4 e  5
+
+```javascript
+window.SDKCheckout.hideInstallments({ id: 'gateway_credit_card', value: [3, 6] })
+```
