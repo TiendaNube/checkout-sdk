@@ -15,7 +15,7 @@ const validateReadyState = async () => {
     return false
   }
 
-  return await checkObjectWindow('paymentIframeLoaded', 30)
+  return await checkObjectWindow('paymentIframeLoaded', 60)
 }
 
 const setInitialWindowSDK = () => {
